@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsProj1</title>
+  <title>Rails App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="header">
+  <p>Rails App</p>
+</div>
+<div id="nav">
+  <ul id="navList">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/cat-pictures">Cats</a></li>
+  </ul>
+</div>
 
 <%= yield %>
 

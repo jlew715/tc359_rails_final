@@ -1,0 +1,6 @@
+<h1>Suddenly, cats. Everywhere.</h1>
+<p>If you add a number after the url (".../cat-pictures/28"), you'll get that number of cat pictures.</p>
+<br/>
+<% @cats.each do |cat| %>
+  <img src="<%= cat.url %>" alt="Cat pic">
+<% end %>
