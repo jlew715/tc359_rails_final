@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Recyclers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th>Email</th>
+      <th>Accepts white computer paper</th>
+      <th>Accepts corrugated cardboard</th>
+      <th>Accepts color separated glass</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recyclers.each do |recycler| %>
+      <tr>
+        <td><%= recycler.name %></td>
+        <td><%= recycler.address %></td>
+        <td><%= recycler.phone %></td>
+        <td><%= recycler.website %></td>
+        <td><%= recycler.email %></td>
+        <td><%= recycler.accepts_white_computer_paper %></td>
+        <td><%= recycler.accepts_corrugated_cardboard %></td>
+        <td><%= recycler.accepts_color_separated_glass %></td>
+        <td><%= link_to 'Show', recycler %></td>
+        <td><%= link_to 'Edit', edit_recycler_path(recycler) %></td>
+        <td><%= link_to 'Destroy', recycler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recycler', new_recycler_path %>

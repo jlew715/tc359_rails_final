@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @recycler.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @recycler.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @recycler.phone %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @recycler.website %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @recycler.email %>
+</p>
+
+<p>
+  <strong>Accepts white computer paper:</strong>
+  <%= @recycler.accepts_white_computer_paper %>
+</p>
+
+<p>
+  <strong>Accepts corrugated cardboard:</strong>
+  <%= @recycler.accepts_corrugated_cardboard %>
+</p>
+
+<p>
+  <strong>Accepts color separated glass:</strong>
+  <%= @recycler.accepts_color_separated_glass %>
+</p>
+
+<%= link_to 'Edit', edit_recycler_path(@recycler) %> |
+<%= link_to 'Back', recyclers_path %>
