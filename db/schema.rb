@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150323150308) do
+ActiveRecord::Schema.define(version: 20150326063352) do
 
   create_table "recyclers", force: :cascade do |t|
     t.text     "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150323150308) do
     t.boolean  "accepts_white_computer_paper"
     t.boolean  "accepts_corrugated_cardboard"
     t.boolean  "accepts_color_separated_glass"
+    t.integer  "locations"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end

@@ -9,6 +9,7 @@ class CreateRecyclers < ActiveRecord::Migration
       t.boolean :accepts_white_computer_paper
       t.boolean :accepts_corrugated_cardboard
       t.boolean :accepts_color_separated_glass
+      t.integer :locations
 
       t.timestamps null: false
     end

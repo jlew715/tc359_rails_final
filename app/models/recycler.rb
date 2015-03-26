@@ -1,6 +1,7 @@
 class Recycler < ActiveRecord::Base
   validates_presence_of :name, message:"Please enter the recycler's name"
   validates_presence_of :address, message:"Please enter the recycler's name"
+  validates_presence_of :locations, message:"Enter the number of locations this business has"
   validates_format_of :phone, with: /\A\d{3}-\d{3}-\d{4}\z/, message: "That isn't a correctly formatted phone number: e.g. 123-456-7890", allow_blank: true
   validates_format_of :email, with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "That isn't a correctly formatted email address: e.g. example@website.com", allow_blank: true
   before_validation :format_website

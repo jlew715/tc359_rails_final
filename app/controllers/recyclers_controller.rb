@@ -69,6 +69,6 @@ class RecyclersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recycler_params
-      params.require(:recycler).permit(:name, :address, :phone, :website, :email, :accepts_white_computer_paper, :accepts_corrugated_cardboard, :accepts_color_separated_glass)
+      params.require(:recycler).permit(:name, :address, :phone, :website, :email, :accepts_white_computer_paper, :accepts_corrugated_cardboard, :accepts_color_separated_glass, :locations)
     end
 end
