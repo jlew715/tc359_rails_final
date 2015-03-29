@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326063352) do
+ActiveRecord::Schema.define(version: 20150329192450) do
+
+  create_table "electronics_stores", force: :cascade do |t|
+    t.text     "name"
+    t.text     "main_address"
+    t.text     "phone"
+    t.text     "website"
+    t.text     "email"
+    t.integer  "number_of_locations"
+    t.boolean  "sells_tablets"
+    t.boolean  "sells_phones"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "recyclers", force: :cascade do |t|
     t.text     "name"

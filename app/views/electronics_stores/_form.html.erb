@@ -1,0 +1,49 @@
+<%= form_for(@electronics_store) do |f| %>
+  <% if @electronics_store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@electronics_store.errors.count, "error") %> prohibited this electronics_store from being saved:</h2>
+
+      <ul>
+      <% @electronics_store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :main_address %><br>
+    <%= f.text_area :main_address %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_area :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_area :website %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_area :email %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_locations %><br>
+    <%= f.number_field :number_of_locations %>
+  </div>
+  <div class="field">
+    <%= f.label :sells_tablets %><br>
+    <%= f.check_box :sells_tablets %>
+  </div>
+  <div class="field">
+    <%= f.label :sells_phones %><br>
+    <%= f.check_box :sells_phones %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

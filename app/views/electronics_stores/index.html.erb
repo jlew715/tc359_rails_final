@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Electronics Stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Main address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th>Email</th>
+      <th>Number of locations</th>
+      <th>Sells tablets</th>
+      <th>Sells phones</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @electronics_stores.each do |electronics_store| %>
+      <tr>
+        <td><%= electronics_store.name %></td>
+        <td><%= electronics_store.main_address %></td>
+        <td><%= electronics_store.phone %></td>
+        <td><%= electronics_store.website %></td>
+        <td><%= electronics_store.email %></td>
+        <td><%= electronics_store.number_of_locations %></td>
+        <td><%= electronics_store.sells_tablets %></td>
+        <td><%= electronics_store.sells_phones %></td>
+        <td><%= link_to 'Show', electronics_store %></td>
+        <td><%= link_to 'Edit', edit_electronics_store_path(electronics_store) %></td>
+        <td><%= link_to 'Destroy', electronics_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Electronics store', new_electronics_store_path %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @electronics_store.name %>
+</p>
+
+<p>
+  <strong>Main address:</strong>
+  <%= @electronics_store.main_address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @electronics_store.phone %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @electronics_store.website %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @electronics_store.email %>
+</p>
+
+<p>
+  <strong>Number of locations:</strong>
+  <%= @electronics_store.number_of_locations %>
+</p>
+
+<p>
+  <strong>Sells tablets:</strong>
+  <%= @electronics_store.sells_tablets %>
+</p>
+
+<p>
+  <strong>Sells phones:</strong>
+  <%= @electronics_store.sells_phones %>
+</p>
+
+<%= link_to 'Edit', edit_electronics_store_path(@electronics_store) %> |
+<%= link_to 'Back', electronics_stores_path %>
