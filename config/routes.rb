@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :electronics_stores
+  resources :sessions, only: [:new, :create, :destroy]
 
-  resources :recyclers
+  get '/sign-in' => 'sessions#new'
+  delete '/sign-out' => 'sessions#destroy'
+
+  resources :electronics_stores
 
   root 'static#home'
 
