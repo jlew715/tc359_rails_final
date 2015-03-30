@@ -2,6 +2,7 @@ class ElectronicsStore < ActiveRecord::Base
   validates_presence_of :name, message:"Please enter the store's name"
   validates_presence_of :main_address, message:"Please enter the main store's address"
   validates_presence_of :number_of_locations, message:"Enter the number of locations this store has"
+  validates :number_of_locations, :numericality => { :greater_than => 0 }
   validates_format_of :phone, with: /\A\d{3}-\d{3}-\d{4}\z/, message: "That isn't a correctly formatted phone number: e.g. 123-456-7890", allow_blank: true
   validates_format_of :email, with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "That isn't a correctly formatted email address: e.g. example@website.com", allow_blank: true
   before_validation :format_website
