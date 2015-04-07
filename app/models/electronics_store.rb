@@ -11,6 +11,7 @@ class ElectronicsStore < ActiveRecord::Base
   def format_website
     self.website = "http://#{website}" unless website.blank? || website[/^https?/]
   end
+  
 
   def valid_website
     return if website.blank?

@@ -5,6 +5,7 @@ class RecyclersController < ApplicationController
   # GET /recyclers.json
   def index
     @recyclers = Recycler.all
+    @recyclers = @recyclers.search(params[:search]) if params[:search].present?
   end
 
   # GET /recyclers/1

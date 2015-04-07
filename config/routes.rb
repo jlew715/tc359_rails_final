@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :electronics_stores
 
+  resources :recyclers
+
   root 'static#home'
 
   get '/about' => 'static#about'
