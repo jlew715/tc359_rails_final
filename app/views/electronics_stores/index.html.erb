@@ -37,11 +37,11 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
+<p id="newLink">
 <% if user_signed_in? %>
 <%= link_to 'New Electronics store', new_electronics_store_path %>
 <% end %>
-<br>
+</p>
 <br>
 <%= will_paginate @electronics_stores %>

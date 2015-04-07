@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'cat_api', '~> 0.1.0'
 
+gem "autoprefixer-rails"
+
 gem 'will_paginate'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

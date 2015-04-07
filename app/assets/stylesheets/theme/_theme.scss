@@ -1,0 +1,46 @@
+$base-bgcolor: #C0C0C0;
+$header-bgcolor: #000000;
+$header-textcolor: #FFFFFF;
+
+html {
+  background-color:$base-bgcolor;
+}
+
+#header {
+  background-color:$header-bgcolor;
+  color:$header-textcolor;
+  font-size:4em;
+}
+
+#nav {
+  background-color:$header-bgcolor;
+  ul {
+    list-style-type: none;
+    font-size:1.3em;
+  }
+  li {
+    color:$header-textcolor;
+    border-style:solid;
+    border-color:$header-textcolor;
+  }
+  a {
+    color:$header-textcolor;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#usernameBox {
+  color:$header-textcolor;
+  border-style:solid;
+  border-color:$header-textcolor;
+  a {
+    color:$header-textcolor;
+  }
+}
+
+#t {
+  font-size:6em;
+}
