@@ -42,3 +42,6 @@
 <% if user_signed_in? %>
 <%= link_to 'New Electronics store', new_electronics_store_path %>
 <% end %>
+<br>
+<br>
+<%= will_paginate @electronics_stores %>

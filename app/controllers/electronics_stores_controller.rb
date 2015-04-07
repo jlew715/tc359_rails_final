@@ -5,7 +5,7 @@ class ElectronicsStoresController < ApplicationController
   # GET /electronics_stores
   # GET /electronics_stores.json
   def index
-    @electronics_stores = ElectronicsStore.all
+    @electronics_stores = ElectronicsStore.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /electronics_stores/1
