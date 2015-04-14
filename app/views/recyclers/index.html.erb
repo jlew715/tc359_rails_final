@@ -10,7 +10,7 @@
   </p>
 <% end %>
 
-<table>
+<table id="recyclers">
   <thead>
     <tr>
       <th>Name</th>
@@ -28,7 +28,7 @@
 
   <tbody>
     <% @recyclers.each do |recycler| %>
-      <tr>
+      <tr class="recycler">
         <td><%= recycler.name %></td>
         <td><%= recycler.address %></td>
         <td><%= recycler.phone %></td>
